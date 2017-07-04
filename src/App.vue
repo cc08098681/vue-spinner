@@ -16,14 +16,14 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
       <li>
-        <spinner type="beat"></spinner>
+        <spinner type="fade" size="40"></spinner>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import Spinner from './vs/spinner.vue';
+import Spinner from './vue-spinner/spinner.vue';
 export default {
   name: 'app',
   data () {
