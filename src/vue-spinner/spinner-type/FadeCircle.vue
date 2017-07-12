@@ -10,18 +10,31 @@
         props: {
             size: {
               type: String,
-              default: '40px'
+            },
+            color: {
+              type: String,
             }
         },
         mounted(){
-          console.log(this.size)
+          if(this.color && this.color!='#444'){
+            this.colorType();
+          }  
+        },
+        methods:{
+          colorType: function(){
+            let style=document.createElement('style');
+            style.setAttribute('type', 'text/css');
+            style.innerHTML = this.bgc;
+            document.head.appendChild(style);
+          }
         },
         data() {
             return {
                 sizeStyle: {
                     height: this.size + 'px',
                     width: this.size + 'px',
-                }
+                },
+                bgc: `.spinner-fade .spinner-fade-line::before{background-color:` + this.color + `}`
             }
         }       
     }
@@ -37,33 +50,30 @@
       left: 0;
       top: 0;
       &::before{
-        content: '';
+        content: attr(data-color);
         display: block;
         margin: 0 auto;
         width: 5%;
         height: 25%;
-        background-color: #333;
-        animation: circleFadeDelay 1.2s infinite ease-in-out both;     
+        background-color: #444;
+        animation: circleFadeDelay 1s infinite ease-in-out both;     
       }       
       $line-rotation: 0deg;
-      $animation-delay: -1.2s;
+      $animation-delay: 0s;
       @for $i from 1 through 12{
         &:nth-child(#{$i}){
           transform: rotate($line-rotation); 
           $line-rotation: $line-rotation + 30;
           &::before{
             animation-delay: $animation-delay;
-            $animation-delay: $animation-delay + 0.1;
+            $animation-delay: $animation-delay + 0.083;
           }                   
         }
-      }
-      &:nth-child(1)::before{
-        animation-delay: 1.2s;
-      }    
+      }   
     }   
   }
   @keyframes circleFadeDelay {
-    0%, 100% { opacity: .3; }
+    0%, 100% { opacity: 0.4; }
     50% { opacity: 1; } 
   }    
 </style>

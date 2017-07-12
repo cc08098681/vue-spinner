@@ -1,6 +1,6 @@
 <template>
     <div class="spinner">
-        <component :is="spinner" :size="this.size"></component>
+        <component :is="spinner" :size="this.size" :color="this.color"></component>
     </div>
 </template>
 
@@ -13,11 +13,14 @@
             type:{
                 type:String,
                 required: true,
-                default: 'BeatPoint'
+                default: 'fade'
             },
             size:{
                 type:String,
                 default: '20'
+            },
+            color:{
+                type:String,
             }
         },
         components:{

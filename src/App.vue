@@ -1,23 +1,16 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1></h1>
-    <h2>Essential Links</h2>
+    <h1>vue-spinner</h1>
+    <p>attribute  size="Number" color="String"</p>
     <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
       <li>
         <spinner type="fade" size="40"></spinner>
+        <p>type=fade</p>
       </li>
+      <li>
+        <spinner type="beat" size="10" color="green"></spinner>
+        <p>type=beat</p>
+      </li>   
     </ul>
   </div>
 </template>
@@ -28,7 +21,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      
     }
   },
   components:{
@@ -42,26 +35,34 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+  h1,p{
+    text-align: center;
+  }
+  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      float: left;
+      width: 10%;
+      height: 150px;
+      position: relative;
+      text-align: center;
+      box-sizing: border-box;
+      border: 1px solid #333;
+      border-right: none;
+      .spinner{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+      }      
+    }
+    li:last-child {
+      border-right: 1px solid #333;
+    }    
+  }
 }
 
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-</style>
+</style> 

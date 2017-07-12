@@ -12,7 +12,9 @@ export default {
   props: {
     size: {
       type: String,
-      default: '5px'
+    },
+    color: {
+      type: String,
     }
   },
   data () {
@@ -20,6 +22,7 @@ export default {
       sizeStyle: {
         height: this.size + 'px',
         width: this.size + 'px',
+        backgroundColor: this.color
       }
     }
   }
@@ -33,7 +36,6 @@ export default {
       animation-fill-mode: both;
       display: inline-block;
       border-radius: 100%;
-      background-color: #444;
       &:nth-child(2){
         margin: 0 3px;
       }       
