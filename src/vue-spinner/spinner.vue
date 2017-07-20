@@ -7,6 +7,8 @@
 <script type="text/javascript">
     import BeatPoint from './spinner-type/BeatPoint.vue'
     import FadeCircle from './spinner-type/FadeCircle.vue'
+    import RotateClip from './spinner-type/RotateClip.vue'
+    import StepLine from './spinner-type/StepLine.vue'
     export default{
         name: 'spinner',
         props:{
@@ -24,8 +26,10 @@
             }
         },
         components:{
-           SpinnerBeat:BeatPoint,
-           SpinnerFade:FadeCircle 
+           SpinnerBeat: BeatPoint,
+           SpinnerFade: FadeCircle,
+           SpinnerRotate: RotateClip,
+           SpinnerLine: StepLine
         },
         computed:{
             spinner(){

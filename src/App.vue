@@ -10,7 +10,15 @@
       <li>
         <spinner type="beat" size="10" color="green"></spinner>
         <p>type=beat</p>
-      </li>   
+      </li>
+      <li>
+        <spinner type="rotate" size="40"></spinner>
+        <p>type=rotate</p>    
+      </li>  
+      <li>
+        <spinner type="line" size="20"></spinner>
+        <p>type=line</p>    
+      </li>             
     </ul>
   </div>
 </template>
@@ -31,6 +39,9 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+    min-width: 1200px;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -45,7 +56,7 @@ export default {
     margin: 0;
     li {
       float: left;
-      width: 10%;
+      min-width: 150px;
       height: 150px;
       position: relative;
       text-align: center;
