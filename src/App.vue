@@ -4,11 +4,11 @@
     <p>attribute  size="Number" color="String"</p>
     <ul>
       <li>
-        <spinner type="fade" size="40"></spinner>
+        <spinner type="fade" size="40" color="#444"></spinner>
         <p>type=fade</p>
       </li>
       <li>
-        <spinner type="beat" size="10" color="green"></spinner>
+        <spinner type="beat" size="10"></spinner>
         <p>type=beat</p>
       </li>
       <li>
@@ -18,7 +18,11 @@
       <li>
         <spinner type="line" size="20"></spinner>
         <p>type=line</p>    
-      </li>             
+      </li>
+      <li>
+        <spinner type="ball" size="60"></spinner>
+        <p>type=ball</p>    
+      </li>                    
     </ul>
   </div>
 </template>

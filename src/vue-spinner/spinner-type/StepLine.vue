@@ -1,6 +1,6 @@
 <template>
     <div class="spinner-stepline" v-show="loading">
-        <div class="stepline" v-for="i in 5" v-bind:style="spinnerStyle"></div>
+        <div class="spinner-stepline-item" v-for="i in 5" v-bind:style="spinnerStyle"></div>
     </div>
 </template>
 
@@ -40,7 +40,7 @@ export default {
     .spinner-stepline
     {
         text-align: center;         
-          .stepline {
+          .spinner-stepline-item {
               display: inline-block;
               margin: 2px;
               border-radius: 2px;

@@ -1,6 +1,6 @@
 <template>
 <div class="spinner-clip" v-show="loading">
-    <div class="clip-box" v-bind:style="spinnerStyle">
+    <div class="spinner-clip-item" v-bind:style="spinnerStyle">
     </div>
   </div>
 </template>
@@ -15,11 +15,9 @@ export default {
     },
     color: { 
       type: String,
-      default: '#5dc596'
     },
     size: {
       type: String,
-      default: '35px'
     },
   },
   computed: {
@@ -38,7 +36,7 @@ export default {
 .spinner-clip
 {
   text-align: center; 
-  .clip-box{
+  .spinner-clip-item{
     animation: clipDelay 0.75s 0s infinite linear;
     animation-fill-mode: both;
     display: inline-block; 
@@ -57,7 +55,7 @@ export default {
     }
     50%
     {
-      transform: rotate(180deg) scale(0.8);
+      transform: rotate(180deg) scale(0.6);
     }
     100%
     {

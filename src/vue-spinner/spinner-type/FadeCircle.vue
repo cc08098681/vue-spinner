@@ -1,6 +1,6 @@
 <template>
     <div class="spinner-fade" v-bind:style="sizeStyle">
-          <div class="spinner-fade-line" v-for="i in 12"></div>
+          <div class="spinner-fade-item" v-for="i in 12"></div>
     </div>
 </template>
 
@@ -34,7 +34,7 @@
                     height: this.size + 'px',
                     width: this.size + 'px',
                 },
-                bgc: `.spinner-fade .spinner-fade-line::before{background-color:` + this.color + `}`
+                bgc: `.spinner-fade .spinner-fade-item::before{background-color:` + this.color + `}`
             }
         }       
     }
@@ -43,7 +43,7 @@
 <style lang="scss">
   .spinner-fade{
     position: relative;
-    .spinner-fade-line{
+    .spinner-fade-item{
       width: 100%;
       height: 100%;
       position: absolute;

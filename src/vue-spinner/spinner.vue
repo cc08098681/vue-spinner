@@ -9,6 +9,7 @@
     import FadeCircle from './spinner-type/FadeCircle.vue'
     import RotateClip from './spinner-type/RotateClip.vue'
     import StepLine from './spinner-type/StepLine.vue'
+    import BallScale from './spinner-type/BallScale.vue'
     export default{
         name: 'spinner',
         props:{
@@ -23,13 +24,15 @@
             },
             color:{
                 type:String,
+                default:'#5dc596'
             }
         },
         components:{
            SpinnerBeat: BeatPoint,
            SpinnerFade: FadeCircle,
            SpinnerRotate: RotateClip,
-           SpinnerLine: StepLine
+           SpinnerLine: StepLine,
+           SpinnerBall: BallScale
         },
         computed:{
             spinner(){
