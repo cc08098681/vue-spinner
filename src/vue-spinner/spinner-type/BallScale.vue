@@ -1,6 +1,6 @@
 <template>
     <div class="spinner-ball" v-show="loading" v-bind:style="sizeStyle">
-        <div class="spinner-ball-item" v-bind:style="sizeStyleItem" v-for="i in 3"></div>
+        <div class="spinner-ball-item" v-bind:style="sizeStyleItem" v-for="i in 3" key="i"></div>
     </div>
 </template>
 
@@ -18,7 +18,7 @@
             },
             size:{
                 type: String,
-                defalut: '40px'
+                defalut: '40'
             }
         },    
         data(){

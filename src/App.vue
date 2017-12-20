@@ -16,7 +16,7 @@
         <p>type=rotate</p>    
       </li>  
       <li>
-        <spinner type="line" size="20"></spinner>
+        <spinner type="step" size="20"></spinner>
         <p>type=line</p>    
       </li>
       <li>

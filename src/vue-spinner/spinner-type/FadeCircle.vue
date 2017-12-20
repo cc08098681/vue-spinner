@@ -22,7 +22,7 @@
         },
         methods:{
           colorType: function(){
-            let style=document.createElement('style');
+            let style = document.createElement('style');
             style.setAttribute('type', 'text/css');
             style.innerHTML = this.bgc;
             document.head.appendChild(style);
@@ -34,7 +34,7 @@
                     height: this.size + 'px',
                     width: this.size + 'px',
                 },
-                bgc: `.spinner-fade .spinner-fade-item::before{background-color:` + this.color + `}`
+                bgc: `.spinner-fade .spinner-fade-item::before{background-color:${this.color}}`
             }
         }       
     }
@@ -50,7 +50,7 @@
       left: 0;
       top: 0;
       &::before{
-        content: attr(data-color);
+        content: '';
         display: block;
         margin: 0 auto;
         width: 5%;

@@ -31,7 +31,7 @@
            SpinnerBeat: BeatPoint,
            SpinnerFade: FadeCircle,
            SpinnerRotate: RotateClip,
-           SpinnerLine: StepLine,
+           SpinnerStep: StepLine,
            SpinnerBall: BallScale
         },
         computed:{
