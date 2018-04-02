@@ -1,6 +1,6 @@
 <template>
     <div class="spinner">
-        <component :is="spinner" :size="this.size" :color="this.color"></component>
+        <component :is="spinner" :size="size" :color="color"></component>
     </div>
 </template>
 
