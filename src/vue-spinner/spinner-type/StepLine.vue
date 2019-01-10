@@ -1,6 +1,6 @@
 <template>
     <div class="spinner-stepline" v-show="loading">
-        <div class="spinner-stepline-item" v-for="i in 5" v-bind:style="spinnerStyle"></div>
+        <div class="spinner-stepline-item" v-for="i in 5" v-bind:style="spinnerStyle" :key="i"></div>
     </div>
 </template>
 
